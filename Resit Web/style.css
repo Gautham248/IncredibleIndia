@@ -1,0 +1,304 @@
+/* General Styles */
+@font-face {
+    font-family: "Academic";
+    src: url("Assets/Academic M54.ttf");
+}
+
+body { 
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color:rgb(0, 0, 0);
+}
+
+/* Header Styles */
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Academic';
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    /* font-weight: bold; */
+    transition: font-size 0.3s ease-in-out; 
+}
+
+
+nav ul li a:hover {
+    /* text-decoration: underline; */
+    font-size: 1.2em;
+}
+
+/* Video Styles */
+video {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Paragraph Styles */
+p.intro {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+    text-align: center;
+}
+.fit-picture {
+    width: 250px;
+  }
+
+/* Footer Styles */
+footer {
+    background: #56f145;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/*------------------------Destinations Page-------------------------------*/
+.place {
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+}
+
+.place h1 {
+    font-size: 50px;
+    font-family: monospace;
+}
+
+.place img {
+    max-width: 600px;
+    height: auto;
+    transition: max-width 0.5s ease-in-out; 
+}
+
+.place img:hover
+{
+    max-width: 700px;
+    height: auto;
+}
+
+.place p {
+    padding: 20px;
+}
+
+
+/* Histoy Page---------------------------------------------- */
+
+@font-face {
+    font-family: "University";
+    src: url("Assets/University.otf");
+}
+
+.historyHead{
+    font-family: 'University';
+    font-size: 28px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+ /* Horizontal Scroll div animations--------------------------------- */
+
+ /* https://codepen.io/adityajanuardi/pen/YzydaVj */
+ .scroll-container {
+    overflow-x:auto;
+    overflow-y: hidden;
+    
+    padding: 5px 0;
+    height: 100%;
+  }
+  
+  .gridscroll {
+    display: flex;
+    animation: marquee 10s linear infinite;
+  }
+  
+  .gridscroll img {
+    margin-right: 22px;
+    transition: filter 0.3s ease;
+    height: auto;
+    max-width: 500px;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    margin-right: 22px;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-family: 'Academic';
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 7px;
+  }
+  
+  .image-container:hover img {
+    filter: blur(2px);
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+  @keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+  
+    /* Horizontal Scroll div animations--------------------------------- */
+    
+
+    /* Gallery Page ------------------------------------------------------------ */
+
+    @keyframes appear
+    {
+        from{
+            opacity: 0;
+            scale: 0.5;
+
+        }
+        to
+        {
+            opacity: 1;
+            scale: 1;
+        }
+    }
+
+    .infinityScroll{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 30px;
+        
+    } 
+     .scrollBlocks img{
+        height: auto;
+        display: block;
+        max-width: 300px;
+        margin-bottom: 20px;
+        /* margin-top: 20px; */
+        animation:  appear 3s linear;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+       
+    }
+    .scrollBlocks video{
+        height: auto;
+        display: block;
+        max-width: 300px;
+        margin-bottom: 20px;
+        /* margin-top: 20px; */
+        animation:  appear 3s linear;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+       
+    }
+
+    /* ------------------------------------------------------------- */
+
+    /* About Page---------------------------------------------------------- */
+    @font-face {
+        font-family: "Cocogoose";
+        src: url("Assets/Cocogoose-Pro-Regular-trial.ttf");
+    }
+    @font-face {
+        font-family: "Bebas";
+        src: url("Assets/BebasNeue-Regular.ttf");
+    }
+    @keyframes slide-in
+    {
+        from{
+            opacity: 0;
+            transform: translateX(-100px);
+
+        }
+        to
+        {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    .aboutIndiaTitle
+    {
+        font-family: "Cocogoose";
+        font-size: 30px;
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+    .about_sections{
+        display: block;
+        align-items: center;
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        animation:  slide-in 3s linear;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+    }
+    .titlesInAbout{
+        font-family: "Bebas";
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+
+    .styled-texts{
+        font-family: "Cocogoose";
+    }
